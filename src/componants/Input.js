@@ -10,15 +10,16 @@ class Input extends React.Component {
     }
 
     handleChange = (event) => {
-        // this.setState({name: event.target.value})
-        this.setState(() => ({ name: event.target.value }))
+        this.setState({name: event.target.value})
+
+       // this.setState(() => ({ name: event.target.value }))
       }
     
     render() {
 
         return (
             <div>
-                <p>Hello {this.state.name}</p>
+                <h3>Hello {this.state.name}</h3>
                 <input type="text" onChange={this.handleChange}></input>
             </div>
         );

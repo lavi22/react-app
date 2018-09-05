@@ -3,17 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 import CurrentName from './componants/CurrentName';
+import Input from './componants/Input';
 
 
 class App extends Component {
-//constructor with a default state
+
   constructor(){ 
     super();
     this.state = {
-      name: "Steven",
-      show: true
+      name: "All",
+      show: true,
     }
-    // this.handleClick = this.handleClick.bind(this);
+
+ 
   }
 
   handleClick = () => {
@@ -22,7 +24,7 @@ class App extends Component {
 
   render() {
 
-    return ( //passing the this.state.name to the new component: CurrentName to display the name on screen
+    return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -33,7 +35,9 @@ class App extends Component {
 
         <button onClick={this.handleClick}>Click me</button>
 
-        {this.state.show ? <CurrentName name={this.state.name}/> : null}
+        {this.state.show ? <CurrentName name={this.state.name}/> : <h1>Hello world</h1> }
+        <Input/>
+        
       </div>
     );
   }

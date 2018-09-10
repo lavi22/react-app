@@ -4,6 +4,7 @@ import './App.css';
 
 import CurrentName from './componants/CurrentName';
 import Input from './componants/Input';
+//import Product from './componants/Product';
 
 
 class App extends Component {
@@ -36,9 +37,11 @@ class App extends Component {
         <button onClick={this.handleClick}>Click me</button>
 
         {this.state.show ? <CurrentName name={this.state.name}/> : <h1>Hello world</h1> }
-        <Input/>
+        <Input />
         
       </div>
+
+
     );
   }
 }

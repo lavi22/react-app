@@ -1,3 +1,9 @@
+body{
+width:100%;
+padding:0;
+margin:0;
+
+}
 .App {
   text-align: center;
   
@@ -35,8 +41,20 @@
   padding: 3px;
 }
 
-.ProductSection{
-  padding:20px;
+.Product{
+  width:100%;
+}
+
+.ProductLine{
+  width:25%;
+  float: left;
+}
+
+.ProductBox{
+  width:80%;
+  border: 1px solid black;
+  padding-top:30px;
+  padding-bottom:30px;
 }
 
 .FeedBox{

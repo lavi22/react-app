@@ -14,8 +14,8 @@ class Feed extends React.Component {
 
         axios.get('http://www.mocky.io/v2/5b967e723000006e000bd2f4')
         .then(res => {
-            this.setState(() => ({ data: res.data }))
-            console.log(this.state.data);
+            this.setState(() => ({ currentData: res.data }))
+            console.log(this.state.currentData);
         });
       }
     
@@ -24,8 +24,8 @@ class Feed extends React.Component {
         return (
             <div className="FeedBox">
                 {
-                    this.state.data ? this.state.data.map((data, i) => (
-                        <p key= {i}>Hello, {data.name} occupation, {data.occupation}!</p>    
+                    this.state.currentData ? this.state.currentData.map((currentData, i) => (
+                        <p key= {i}>Name: {currentData.name}. Occupation: {currentData.occupation}!</p>    
                     )) : null
                 } 
                 {/* <h3>Name: {this.state.data ? this.state.data[1].name : null}. Occupation: {this.state.data ? this.state.data[1].occupation : null}</h3> */}

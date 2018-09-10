@@ -4,7 +4,7 @@ import './App.css';
 
 import CurrentName from './componants/CurrentName';
 import Input from './componants/Input';
-//import Product from './componants/Product';
+import Feed from './componants/Feed';
 
 
 class App extends Component {
@@ -38,7 +38,7 @@ class App extends Component {
 
         {this.state.show ? <CurrentName name={this.state.name}/> : <h1>Hello world</h1> }
         <Input />
-        
+        <Feed />
       </div>
 
 

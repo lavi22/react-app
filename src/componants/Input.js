@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import '../App.css';
 
 class Input extends React.Component {
 
@@ -10,9 +11,12 @@ class Input extends React.Component {
     }
 
     handleChange = (event) => {
+        
         this.setState({name: event.target.value})
 
-       // this.setState(() => ({ name: event.target.value }))
+        // this.setState(() => ({ 
+        //     name: event.value
+        // }))
       }
     
     render() {
@@ -20,7 +24,7 @@ class Input extends React.Component {
         return (
             <div>
                 <h3>Hello {this.state.name}</h3>
-                <input type="text" onChange={this.handleChange}></input>
+                <input type="text" className="InputBox" onChange={this.handleChange}></input>
             </div>
         );
     }

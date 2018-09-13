@@ -16,8 +16,6 @@ class App extends Component {
       name: "All",
       show: true,
     }
-
- 
   }
 
   handleClick = () => {
